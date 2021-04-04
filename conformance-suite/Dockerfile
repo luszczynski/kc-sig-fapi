@@ -6,6 +6,8 @@ ARG OPENID_GIT_TAG
 RUN apt-get update && apt-get install -y redir python3 python3-pip git
 RUN pip3 install requests
 RUN git clone -b ${OPENID_GIT_TAG} ${OPENID_GIT_URL} ./conformance-suite
+# clone master until FAPI 1.0 Final supported conformance test tag is released.
+#RUN git clone https://gitlab.com/openid/conformance-suite.git ./conformance-suite
 ADD . ./conformance-suite/
 EXPOSE 8080
 EXPOSE 9090

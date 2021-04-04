@@ -130,8 +130,8 @@ To access to Keycloak and Resource server with FQDN, modify your `hosts` file in
 6. Choose `plain_fapi` as FAPI Profile.
 7. Choose `plain_response` as FAPI Response Mode.
 8. Click `JSON` tab and paste content of the configuration.
-  * If you want to use private_key_jwt client authentication, use [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256.json).
-  * If you want to use mtls client authentication, use [fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256.json).
+  * If you want to use private_key_jwt client authentication, use [fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256.json).
+  * If you want to use mtls client authentication, use [fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256.json).
 9. Click `Create Test Plan` button and follow the instructions. To proceed with the tests, You can authenticate using `john` account with password `john`. When rejecting authentication scenario, you can use `mike` account with password `mike`. In this case, you need to click `No` button to cancel the authentication in the consent screen.
 
 
