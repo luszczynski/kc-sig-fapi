@@ -27,6 +27,7 @@ services:
         KEYCLOAK_REALM_IMPORT_FILENAME: ${KEYCLOAK_REALM_IMPORT_FILENAME}
     ports:
      - "8787:8787"
+     - "8080:9080"
     environment:
      - KEYCLOAK_USER=${KEYCLOAK_USER}
      - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
@@ -62,25 +63,27 @@ services:
     volumes:
       - ./client_private_keys:/keys
     command: /keys
-  test_runner:
-    build:
-      context: ./test-runner
-    environment:
-     - AUTOMATE_TESTS=${AUTOMATE_TESTS}
-    volumes:
-     - /var/run/docker.sock:/var/run/docker.sock
-     - ./fapi-conformance-suite-configs:/json-config
-    depends_on:
-     - load_balancer
-     - keycloak
-     - server
+#  test_runner:
+#    build:
+#      context: ./test-runner
+#    environment:
+#     - AUTOMATE_TESTS=${AUTOMATE_TESTS}
+#    volumes:
+#     - /var/run/docker.sock:/var/run/docker.sock
+#     - ./fapi-conformance-suite-configs:/json-config
+#    depends_on:
+#     - load_balancer
+#     - keycloak
+#     - server
   mongodb:
     image: mongo
 #    volumes:
 #     - mongodata:/data/db
   httpd:
     build:
-      context: ${OPENID_GIT_URL}#${OPENID_GIT_TAG}:httpd
+#      context: ${OPENID_GIT_URL}#${OPENID_GIT_TAG}:httpd
+      # context: ./httpd
+      context: ./httpd-4.1.12
     ports:
       - "8443:8443"
     depends_on:
