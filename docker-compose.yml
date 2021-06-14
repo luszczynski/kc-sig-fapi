@@ -63,18 +63,18 @@ services:
     volumes:
       - ./client_private_keys:/keys
     command: /keys
-#  test_runner:
-#    build:
-#      context: ./test-runner
-#    environment:
-#     - AUTOMATE_TESTS=${AUTOMATE_TESTS}
-#    volumes:
-#     - /var/run/docker.sock:/var/run/docker.sock
-#     - ./fapi-conformance-suite-configs:/json-config
-#    depends_on:
-#     - load_balancer
-#     - keycloak
-#     - server
+  # test_runner:
+  #   build:
+  #     context: ./test-runner
+  #   environment:
+  #     - AUTOMATE_TESTS=${AUTOMATE_TESTS}
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - ./fapi-conformance-suite-configs:/json-config
+  #   depends_on:
+  #     - load_balancer
+  #     - keycloak
+  #     - server
   mongodb:
     image: mongo
 #    volumes:
