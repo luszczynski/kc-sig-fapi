@@ -1,5 +1,7 @@
 .bin
 
+.DS_Store
+
 HELP.md
 target/
 .mvn/
